@@ -1,0 +1,1 @@
+python /data1/compbio/kschlum/software/asaph_py2/asaph/utils/sig_test_snps.py --input /data1/compbio/kschlum/ecoli/asaph_out/test_case_1/analysis/snp_pc_1_logreg_assoc_tests.tsv --output /data1/compbio/kschlum/ecoli/asaph_out/test_case_1/analysis/snp_pc_1_logreg_assoc_tests.sig_1.tsv --significance 1
