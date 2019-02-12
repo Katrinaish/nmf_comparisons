@@ -1,9 +1,0 @@
-﻿testCaseNum,NumFeat,NumSamp,NumGroups,startFeatTest,endFeatTest,startSampCol,endSampCol,testing,otherFeatNotTesting,expVal
-1,300,100,2,0,20,0,50,present,random
-1,300,100,2,0,20,75,100,present,random
-2,300,50,2,0,20,0,25,present,random
-3,300,50,2,0,20,25,50,present,random
-4,300,100,2,0,20,0,50,absent,random
-4,300,100,2,0,20,75,100,absent,random
-5,300,50,2,0,20,0,25,absent,random
-6,300,50,2,0,20,25,50,absent,random
