@@ -61,7 +61,7 @@ saveMatrix("/data1/compbio/kschlum/ecoli/nmf_vs_asaph/" , "matrix_all_comparisio
 
 
 
-#test case 2 - where 200 features but same setupa as test case 1 
+#test case 2 - where 200 features but same setup as test case 1 
 
 starterMatrix = generateMatrix(200, 100)
 
