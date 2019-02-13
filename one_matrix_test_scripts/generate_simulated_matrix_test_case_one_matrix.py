@@ -52,8 +52,8 @@ fourthMatrix = testFeatMatSetup(100, 150, 0, 50, thirdMatrix, 1)
 fifthMatrix = testFeatMatSetup(100, 150, 50, 100, fourthMatrix, 0)
 
 #generate where genes present in group 2
-sixthMatrix = testFeatMatSetup(150, 200, 51, 100, fifthMatrix, 0)
-seventhMatrix = testFeatMatSetup(150, 200, 51, 100, sixthMatrix, 1)
+sixthMatrix = testFeatMatSetup(150, 200, 50, 100, fifthMatrix, 0)
+seventhMatrix = testFeatMatSetup(150, 200, 50, 100, sixthMatrix, 1)
 
 
 saveMatrix("/data1/compbio/kschlum/ecoli/nmf_vs_asaph/" , "matrix_all_comparision_test_case_1.csv", seventhMatrix)
