@@ -38,69 +38,30 @@ def saveMatrix(saveDir, fileName, matrix):
     np.savetxt(saveDir + fileName, matrix, delimiter=",", fmt = '%d')
 
 
+#initialize matrix
+starterMatrix = generateMatrix(400, 100)
 
 #generate where genes present in both groups
-starterMatrix = generateMatrix(200, 100)
 secondMatrix = testFeatMatSetup(0, 50, 0, 100, starterMatrix, 0)
-thirdMatrix = testFeatMatSetup(51, 100, 0, 100, secondMatrix, 1)
-fourthMatrix = testFeatMatSetup(101, 150, 0, 50, thirdMatrix, 1)
-#fifthMatrix = testFeatMatSetup(101, 150, 51, 100, fourthMatrix, 0)
 
-fifthMatrix = testFeatMatSetup(151, 200, 51, 100, fourthMatrix, 0)
-#seventhMatrix = testFeatMatSetup(151, 200, 51, 100, sixthMatrix, 1)
+#generate where genes present in absent groups
+thirdMatrix = testFeatMatSetup(50, 100, 0, 100, secondMatrix, 1)
+
+#generate where genes present in group 1
+fourthMatrix = testFeatMatSetup(100, 150, 0, 50, thirdMatrix, 1)
+fifthMatrix = testFeatMatSetup(100, 150, 50, 100, fourthMatrix, 0)
+
+#generate where genes present in group 2
+sixthMatrix = testFeatMatSetup(150, 200, 51, 100, fifthMatrix, 0)
+seventhMatrix = testFeatMatSetup(150, 200, 51, 100, sixthMatrix, 1)
 
 
-#print(seventhMatrix)
-
-saveMatrix("/data1/compbio/kschlum/ecoli/nmf_vs_asaph/" , "matrix_all_comparision_round_3.csv", fifthMatrix)
+saveMatrix("/data1/compbio/kschlum/ecoli/nmf_vs_asaph/" , "matrix_all_comparision_test_case_1.csv", seventhMatrix)
 
 
-#thirdMatrix = testFeatMatSetup(0, 20, 75,100, secondMatrix, 1)
-#saveMatrix("/data1/compbio/kschlum/ecoli/nmf_vs_asaph/test_case_1/" , "matrix_1.csv", thirdMatrix)
-#
-#
-##generate where only present in group 1
-#
-#starterMatrix = generateMatrix(300, 50)
-#secondMatrix = testFeatMatSetup(0, 20, 0,25, starterMatrix, 1)
-#saveMatrix("/data1/compbio/kschlum/ecoli/nmf_vs_asaph/test_case_2/" , "matrix_2.csv", secondMatrix)
-##
-##
-##
-##
-###generate where only present in group 2
-##
-##
-#starterMatrix = generateMatrix(300, 50)
-#secondMatrix = testFeatMatSetup(0, 20, 25,50, starterMatrix, 1)
-#saveMatrix("/data1/compbio/kschlum/ecoli/nmf_vs_asaph/test_case_3/" , "matrix_3.csv", secondMatrix)
-#
-#
-##
-###generate where genes absent in both groups
-##
-##
-##
-#starterMatrix = generateMatrix(300, 100)
-#secondMatrix = testFeatMatSetup(0, 20, 0,25, starterMatrix, 0)
-#thirdMatrix = testFeatMatSetup(0, 20, 75,100, secondMatrix, 0)
-#saveMatrix("/data1/compbio/kschlum/ecoli/nmf_vs_asaph/test_case_4/" , "matrix_4.csv", thirdMatrix)
-##
-##
-####generate where only absent in group 1
-###
-###
-##starterMatrix = generateMatrix(300, 50)
-##secondMatrix = testFeatMatSetup(0, 20, 0,25, starterMatrix, 0)
-##saveMatrix("/data1/compbio/kschlum/ecoli/nmf_vs_asaph/test_case_5/" , "matrix_5.csv", secondMatrix)
-##
-##
-###
-###
-####generate where only absent in group 2
-###
-###
-##starterMatrix = generateMatrix(300, 50)
-##secondMatrix = testFeatMatSetup(0, 20, 25,50, starterMatrix, 0)
-##saveMatrix("/data1/compbio/kschlum/ecoli/nmf_vs_asaph/test_case_6/" , "matrix_6.csv", secondMatrix)
-##
+
+
+#test case 2 - where 200 features but same setupa as test case 1 
+
+
+#test case 3 - where 200 features but random features in complementary group that is not being tested  
